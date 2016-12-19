@@ -11,7 +11,7 @@ type client struct {
 	room *room
 }
 
-func (c *client) read {
-	defer c.socket.Clost()
+func (c *client) read() {
+	defer c.socket.Close()
 
 }
