@@ -35,11 +35,11 @@ func main() {
 	var addr = flag.String("addr", ":8080", "The addr of the application.")
 	flag.Parse()
 
-	gomniauth.SetSecurityKey("PUT YOUR AUTH KEY HERE")
+	gomniauth.SetSecurityKey("my_hash")
 	gomniauth.WithProviders(
 		facebook.New("key", "secret", "http://localhost:8080/auth/callback/facebook"),
 		github.New("key", "secret", "http://localhost:8080/auth/callback/github"),
-		google.New("key", "secret", "http://localhost:8080/auth/callback/github"),
+		google.New("580411710308-dqf7hl91lmfrhe2l92741f96mqkoodsu.apps.googleusercontent.com", "hLHNXTJKhyyhpW2XI4GPWNkP", "http://localhost:8080/auth/callback/google"),
 	)
 
 	r := newRoom()
